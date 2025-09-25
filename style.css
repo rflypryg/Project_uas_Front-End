@@ -1,0 +1,350 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #6a5acd;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('images/header.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Search Section (di dalam hero) */
+.search-section {
+  margin-top: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%; 
+}
+
+.search-section input {
+  padding: 10px 300px 10px 30px; 
+  border-radius: 25px; 
+  border: 1px solid #D0D0D0; 
+  background: white; 
+  color: #222121;
+  font-size: 16px;
+  outline: none;
+  width: auto; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-section input::placeholder {
+  text-align: left;
+  color: #6C757D;
+  font-size: 15px; 
+}
+
+
+/* Section */
+.section {
+  padding: 3rem 2rem;
+  background: #fff;
+  margin: 2rem auto;
+  border-radius: 15px;
+  max-width: 1200px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #6a5acd;
+  font-size: 1.8rem;
+}
+
+.card {
+  text-align: center; /* teks di tengah */
+  margin: 2rem 0 2rem 0;   /* jarak atas & bawah */
+}
+
+.sub-section h3 {
+  text-align: center;      /* ukuran lebih besar */
+}
+
+/* Container Grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.card:hover { transform: translateY(-8px); }
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #6a5acd;
+}
+
+/* Big Card */
+.big-card {
+  display: flex;
+  background: #fff;
+  color: #333;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.big-card-image {
+  flex: 1;
+}
+
+.big-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.big-card-text {
+  flex: 2;
+  padding: 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Card default */
+.card {
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-footer {
+    background-color: #ffffff;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    border-top: 1px solid #eee;
+}
+
+.footer-content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer-column {
+    width: 30%;
+    padding: 0 15px;
+}
+
+.footer-about h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.footer-about p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    width: 85%;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 210px;
+    gap: 10px;
+}
+
+.social-icons .icon {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.facebook { background-color: #3b5998; }
+.twitter { background-color: #1da1f2; }
+.youtube { background-color: #ff0000; }
+.behance { background-color: #1769ff; }
+.pinterest { background-color: #bd081c; }
+.wordpress { background-color: #21759b; }
+.instagram { background-color: #c13584; }
+.black-icon { background-color: #000000; }
+.snapchat { background-color: #fffc00; } 
+.blue-icon { background-color: #007bff; }
+.telegram { background-color: #0088cc; } 
+.aqua-icon { background-color: #00bcd4; }
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-bottom p {
+    font-weight: 500;
+}
+
+.footer-bottom p span {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Efek hover biasa */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Animasi muncul */
+.card {
+  opacity: 1;
+}
+.card[style*="display: none"] {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .big-card { flex-direction: column; }
+  .big-card-image img { height: 250px; }
+}
+
+@media (max-width: 600px) {
+  .search-section input { width: 95%; }
+  .navbar ul { flex-direction: column; gap: 0.5rem; }
+}
